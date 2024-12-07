@@ -103,44 +103,47 @@ const SignUpForm = () => {
 			<form onSubmit={handleSubmit} className="form">
 				<h2>Join!</h2>
 				<div>
-					<label>Username:</label>
+					<label htmlFor="username">Username:</label>
 					<input
-						name="username"
+						id="username"
+            name="username"
 						value={formData.username}
 						onChange={handleChange}
-						placeholder="Enter your username"
+						placeholder="Username"
 						style={getInputStyle("username")}
 					/>
 					<p className="error">{errors.username}</p>
 				</div>
 
 				<div>
-					<label>Email:</label>
+					<label htmlFor="email">Email:</label>
 					<input
-						name="email"
+						id="email"
+            name="email"
 						value={formData.email}
 						onChange={handleChange}
-						placeholder="Enter your email"
+						placeholder="Email"
 						style={getInputStyle("email")}
 					/>
 					<p className="error">{errors.email}</p>
 				</div>
 
 				<div className="password-container">
-					<label>Password:</label>
+					<label htmlFor="password">Password:</label>
 					<input
 						type={showPassword ? "text" : "password"}
-						name="password"
+						id="password"
+            name="password"
 						value={formData.password}
 						onChange={handleChange}
-						placeholder="Enter your password"
+						placeholder="Password"
 						style={getInputStyle("password")}
 					/>
           <span
             onClick={() => setShowPassword(!showPassword)}
             style={{
               position: "relative",
-              left: "92%",
+              left: "90%",
               top: "-26px",
               cursor: "pointer",
               color: "#888",
